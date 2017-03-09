@@ -1,0 +1,254 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>Toggle Menu</button>
+    <!-- <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button> -->
+    <ion-title>主页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <h2>欢迎试用Ionic实例教程</h2>
+  <p>
+    这是我业余在Ionic官网学习时做的示例App，如果觉得不错请给个Star哦~
+  </p>
+
+  <button ion-button block (click)="openMenu()">
+    显示操作列表
+  </button>
+
+  <button ion-button block color="dark" (click)="doAlert()">基础弹窗按钮</button>
+
+  <button ion-button block color="secondary" (click)="doPrompt()">提示按钮</button>
+
+  <button ion-button block color="primary" (click)="doConfirm()">确认按钮</button>
+
+  <button ion-button block light (click)="doRadio()">单选按钮</button>
+
+  <button ion-button block color="danger" (click)="doCheckbox()">复选按钮</button>
+
+
+  <h2>徽章</h2>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="musical-notes" item-left style="color: #d03e84"></ion-icon>
+      Star
+      <ion-badge item-right>26K</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="logo-twitter" item-left style="color: #55acee"></ion-icon>
+      Followers
+      <ion-badge item-right>260</ion-badge>
+    </ion-item>
+  </ion-card>
+  
+
+  <h2>按钮</h2>
+
+  <p>样式一</p>
+  
+  <button ion-button color="light">Light</button>
+  <button ion-button>Default</button>
+  <button ion-button color="secondary">Secondary</button>
+  <button ion-button color="danger">Danger</button>
+  <button ion-button color="dark">Dark</button>
+
+  <p>样式二 Outline</p>
+
+  <button ion-button color="light" outline>Light Outline</button>
+  <button ion-button outline>Primary Outline</button>
+  <button ion-button color="secondary" outline>Secondary Outline</button>
+  <button ion-button color="danger" outline>Danger Outline</button>
+  <button ion-button color="dark" outline>Dark Outline</button>
+
+  <p>样式三 Clear</p>
+
+  <button ion-button color="light" clear>Light Clear</button>
+  <button ion-button clear>Primary Clear</button>
+  <button ion-button color="secondary" clear>Secondary Clear</button>
+  <button ion-button color="danger" clear>Danger Clear</button>
+  <button ion-button color="dark" clear>Dark Clear</button>
+
+  <p>样式四 Round</p>
+
+  <button ion-button color="light" round>Light Round</button>
+  <button ion-button round>Primary Round</button>
+  <button ion-button color="secondary" round>Secondary Round</button>
+  <button ion-button color="danger" round>Danger Round</button>
+  <button ion-button color="dark" round>Dark Round</button>
+
+  <p>样式五 Block</p>
+
+  <p>
+    <button ion-button color="light" block>Light</button>
+  </p>
+
+  <p>
+    <button ion-button block>Default</button>
+  </p>
+
+  <p>
+    <button ion-button color="secondary" block>Secondary</button>
+  </p>
+
+  <p>
+    <button ion-button color="danger" block>Danger</button>
+  </p>
+
+  <p>
+    <button ion-button color="dark" block>Dark</button>
+  </p>
+
+  <p>样式六 Full</p>
+
+  <p>
+    <button ion-button color="light" full>Light</button>
+  </p>
+  <p>
+    <button ion-button full>Default</button>
+  </p>
+
+  <p>
+    <button ion-button color="secondary" full>Secondary</button>
+  </p>
+
+  <p>
+    <button ion-button color="danger" full>Danger</button>
+  </p>
+  <p>
+    <button ion-button color="dark" full>Dark</button>
+  </p>
+
+  <p>Size</p>
+
+  <p>
+    <button ion-button color="light" small>Light Small</button>
+  </p>
+  <p>
+    <button ion-button small>Default Small</button>
+  </p>
+  <p>
+    <button ion-button color="secondary">Secondary Medium</button>
+  </p>
+
+  <p>
+    <button ion-button color="danger" medium>Danger Medium</button>
+  </p>
+  <p>
+    <button ion-button color="dark" large>Dark Large</button>
+  </p>
+
+  <p>Icon Button</p>
+
+  <p>
+    <button ion-button color="light" icon-left>
+      <ion-icon name='arrow-back'></ion-icon>
+      返回
+    </button>
+
+    <button ion-button color="light" icon-only>
+      <ion-icon name='arrow-down'></ion-icon>
+    </button>
+
+    <button ion-button color="light" icon-only>
+      <ion-icon name='arrow-up'></ion-icon>
+    </button>
+
+    <button ion-button color="light" icon-right>
+      下一页
+      <ion-icon name='arrow-forward'></ion-icon>
+    </button>
+  </p>
+
+  <p>
+    <button ion-button icon-left>
+      <ion-icon name='home'></ion-icon>
+      主页
+    </button>
+    <button ion-button outline icon-left>
+      <ion-icon name='briefcase' is-active="false"></ion-icon>
+      工作
+    </button>
+    <button ion-button clear icon-left>
+      <ion-icon name='beer' is-active="false"></ion-icon>
+      酒吧
+    </button>
+  </p>
+
+  <p>
+    <button ion-button color="secondary" icon-left>
+      <ion-icon name='people'></ion-icon>
+      好友
+    </button>
+    <button ion-button color="secondary" outline icon-left>
+      <ion-icon name='paw' is-active="false"></ion-icon>
+      百度
+    </button>
+  </p>
+
+  <p>
+    <button ion-button color="danger" icon-left>
+      <ion-icon name='close'></ion-icon>
+      删除
+    </button>
+    <button ion-button color="danger" outline icon-only>
+      <ion-icon name='remove-circle' is-active="false"></ion-icon>
+    </button>
+    <button ion-button color="danger" clear icon-only>
+      <ion-icon name='trash' is-active="false"></ion-icon>
+    </button>
+  </p>
+
+  <p>
+    <button ion-button color="dark" round icon-left>
+      <ion-icon name='construct' is-active="false"></ion-icon>
+      设置
+    </button>
+    <button ion-button color="dark" clear icon-only>
+      <ion-icon name='hammer' is-active="false"></ion-icon>
+    </button>
+  </p>
+
+  <p>组件中的按钮</p>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="assets/img/cta-iphone-2.png" />
+    </ion-card-content>
+
+    <ion-item>
+      <button ion-button clear item-left>喜欢</button>
+      <button ion-button clear item-right>收藏</button>
+    </ion-item>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      内部按钮
+      <button ion-button item-right outline>Outline</button>
+    </ion-item>
+
+    <ion-item>
+      左置Icon按钮
+      <button ion-button item-right outline icon-left>
+        <ion-icon name='star'></ion-icon>
+        Left Icon
+      </button>
+    </ion-item>
+
+    <ion-item>
+      右置Icon按钮
+      <button ion-button item-right outline icon-right>
+        Right Icon
+        <ion-icon name='star'></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  
+
+</ion-content>

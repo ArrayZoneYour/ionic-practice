@@ -1,0 +1,196 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Card 布局</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="cards-bg" padding>
+
+	<ion-card>
+
+	  <ion-card-content>
+	    基础卡片样式
+	    啦~
+	    啦~
+	    啦~
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card>
+
+	  <ion-card-header>
+	    标题
+	  </ion-card-header>
+
+	  <ion-card-content>
+	    有头部的卡片
+	  </ion-card-content>
+
+	</ion-card>
+
+
+
+	<ion-card class="cards-list-demo">
+		<ion-card-header>
+			清单卡片
+		</ion-card-header>
+
+		<ion-list>
+			<button ion-item>
+				<ion-icon name='cart' item-left></ion-icon>
+				购物
+			</button>
+
+			<button ion-item>
+				<ion-icon name='medical' item-left></ion-icon>
+				医院
+			</button>
+
+			<button ion-item>
+				<ion-icon name='cafe' item-left></ion-icon>
+				咖啡
+			</button>
+
+			<button ion-item>
+				<ion-icon name='paw' item-left></ion-icon>
+				足迹
+			</button>
+
+			<button ion-item>
+				<ion-icon name='beer' item-left></ion-icon>
+				酒吧
+			</button>
+
+			<button ion-item>
+				<ion-icon name='planet' item-left></ion-icon>
+				宇宙
+			</button>
+
+		</ion-list>
+	</ion-card>
+
+
+
+	<h2>附图片的卡片组</h2>
+
+	<ion-card>
+
+		<img src="assets/img/nin-live.png"/>
+
+		<ion-card-content>
+			<ion-card-title>
+				Nine Inch Nails Live
+			</ion-card-title>
+			<p>
+				The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+			</p>
+		</ion-card-content>
+
+		<ion-row no-padding>
+			<ion-col>
+				<button ion-button clear small color="danger" icon-left>
+					<ion-icon name='star'></ion-icon>
+					收藏
+				</button>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button clear small color="danger" icon-left>
+					<ion-icon name='musical-notes'></ion-icon>
+					试听
+				</button>
+			</ion-col>
+			<ion-col text-right>
+				<button ion-button clear small color="danger" icon-left>
+					<ion-icon name='share-alt'></ion-icon>
+					分享
+				</button>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>
+
+
+	<h2>背景图卡片（依赖样式）</h2>
+
+	<ion-card class="card-background-page">
+		<img src="assets/img/card-saopaolo.png"/>
+		<div class="card-title">圣保罗</div>
+		<div class="card-subtitle">41 条记录</div>
+	</ion-card>
+
+	<h2>进阶卡片（可自定制）</h2>
+
+	<ion-card>
+
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="assets/img/marty-avatar.png">
+			</ion-avatar>
+			<h2>麦佛莱</h2>
+			<p>11/5/1955</p>
+		</ion-item>
+
+		<img src="assets/img/advance-card-bttf.png">
+
+		<ion-card-content>
+			<p>等一下.等一下。呃…你是在告诉我你制造了一台时间机器？</p>
+		</ion-card-content>
+
+		<ion-row>
+			<ion-col>
+				<button ion-button color="primary" clear small icon-left>
+					<ion-icon name='thumbs-up'></ion-icon>
+					赞 12
+				</button>
+			</ion-col>
+			<ion-col>
+				<button ion-button color="primary" clear small icon-left>
+					<ion-icon name='text'></ion-icon>
+					评论 4
+				</button>
+			</ion-col>
+			<ion-col center text-center>
+				<ion-note>
+					11小时之前
+				</ion-note>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>
+
+
+	<ion-card class="adv-map">
+	  <div style="position: relative">
+	    <img src="assets/img/advance-card-map-madison.png">
+	    <ion-fab right top>
+	      <button ion-fab class="fab-map">
+	        <ion-icon name='pin'></ion-icon>
+	      </button>
+	    </ion-fab>
+	  </div>
+	  <ion-item>
+	    <ion-icon color="subtle" large item-left name='football'></ion-icon>
+	    <h2>足球馆</h2>
+	    <p>11 N. Way St, Madison, WI 53703</p>
+	  </ion-item>
+	  <ion-item>
+	    <ion-icon color="subtle" large item-left name='wine'></ion-icon>
+	    <h2>Institute of Fine Cocktails</h2>
+	    <p>14 S. Hop Avenue, Madison, WI 53703</p>
+	  </ion-item>
+	  <ion-item actions>
+	    <span ion-text item-left color="secondary" class="item-bold">18 min</span>
+	    <span ion-text item-left color="subtle">(2.6 mi)</span>
+	    <button ion-button color="primary" clear item-right icon-left>
+	      <ion-icon name='navigate'></ion-icon>
+	      Start
+	    </button>
+	  </ion-item>
+
+	</ion-card>
+
+</ion-content>

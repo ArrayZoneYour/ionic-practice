@@ -1,0 +1,90 @@
+<!--
+  Generated template for the Form page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>表单控件</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+		<ion-list-header>
+			各式各样的CheckBox
+		</ion-list-header>
+
+		<ion-item>
+			<ion-label>默认选中</ion-label>
+			<ion-checkbox checked="true"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>夜间模式</ion-label>
+			<ion-checkbox color="dark" checked="true"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>禁用</ion-label>
+			<ion-checkbox value="cherry" disabled="true"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>绿色未选中</ion-label>
+			<ion-checkbox color="secondary"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>红色选中</ion-label>
+			<ion-checkbox color="danger" checked="true"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>默认不选中</ion-label>
+			<ion-checkbox></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>黑色</ion-label>
+			<ion-checkbox color="energized" checked="true" color="dark"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>royal蓝~</ion-label>
+			<ion-checkbox color="royal" checked="true"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>禁用</ion-label>
+			<ion-checkbox disabled="true"></ion-checkbox>
+		</ion-item>
+
+
+	</ion-list>
+
+	<ion-list>
+
+	<ion-list-header>
+		时间选择器
+	</ion-list-header>
+
+		<ion-item>
+			<ion-label>日期选择</ion-label>
+			<ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+		</ion-item>
+
+
+		<ion-item>
+			<ion-label>时间选择</ion-label>
+			<ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+		</ion-item>
+
+	</ion-list>
+
+</ion-content>
