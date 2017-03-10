@@ -5,7 +5,15 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CardPage } from '../pages/card/card';
 import { FormPage } from '../pages/form/form';
+
+
 import { ComponentGroupPage } from '../pages/component-group/component-group';
+import { ModalContentPage as ComponentGroupModalContentPage } from '../pages/component-group/component-group';
+import { IconListPage } from '../pages/component-group/component-group';
+import { AvatarListPage } from '../pages/component-group/component-group';
+import { MultlineListPage } from '../pages/component-group/component-group';
+import { SlidingListPage } from '../pages/component-group/component-group';
+import { ThumbnailListPage } from '../pages/component-group/component-group'
 
 @NgModule({
   declarations: [
@@ -14,7 +22,13 @@ import { ComponentGroupPage } from '../pages/component-group/component-group';
     TabsPage,
     CardPage,
     FormPage,
-    ComponentGroupPage
+    ComponentGroupPage,
+    ComponentGroupModalContentPage,
+    IconListPage,
+    AvatarListPage,
+    MultlineListPage,
+    SlidingListPage,
+    ThumbnailListPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +40,13 @@ import { ComponentGroupPage } from '../pages/component-group/component-group';
     TabsPage,
     CardPage,
     FormPage,
-    ComponentGroupPage
+    ComponentGroupPage,
+    ComponentGroupModalContentPage,
+    IconListPage,
+    AvatarListPage,
+    MultlineListPage,
+    SlidingListPage,
+    ThumbnailListPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

@@ -1,16 +1,32 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>Toggle Menu</button>
-    <!-- <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button> -->
+    <button ion-button menuToggle icon-only>
+     <ion-icon name='menu'></ion-icon>
+    </button>
     <ion-title>主页</ion-title>
   </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="button">
+      <ion-segment-button value="action">
+        动态按钮
+      </ion-segment-button>
+      <ion-segment-button value="static">
+        静态按钮
+      </ion-segment-button>
+      <ion-segment-button value="inside">
+        嵌套按钮
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-
-
 <ion-content padding>
+
+<div [ngSwitch]="button">
+
+<ion-list *ngSwitchCase="'action'">
+
   <h2>欢迎试用Ionic实例教程</h2>
   <p>
     这是我业余在Ionic官网学习时做的示例App，如果觉得不错请给个Star哦~
@@ -21,15 +37,45 @@
   </button>
 
   <button ion-button block color="dark" (click)="doAlert()">基础弹窗按钮</button>
-
   <button ion-button block color="secondary" (click)="doPrompt()">提示按钮</button>
-
   <button ion-button block color="primary" (click)="doConfirm()">确认按钮</button>
-
   <button ion-button block light (click)="doRadio()">单选按钮</button>
-
   <button ion-button block color="danger" (click)="doCheckbox()">复选按钮</button>
+  <button ion-button block (click)="presentLoading()">加载按钮</button>
 
+  <button ion-button block (click)="showToast('top')">上方显示通知</button>
+  <button ion-button block (click)="showToast('middle')">中央显示通知</button>
+  <button ion-button block (click)="showToast('bottom')">底部显示通知</button>
+  <button ion-button block (click)="showLongToast()">多行通知</button>
+  <button ion-button block (click)="showToastWithCloseButton()">有关闭按钮的提示</button>
+
+  <ion-card (tap)="tapEvent($event)">
+    <ion-item>
+      Tapped: {{tap}} times
+    </ion-item>
+  </ion-card>
+
+  <ion-card (press)="pressEvent($event)">
+    <ion-item>
+      Pressed: {{press}} times
+    </ion-item>
+  </ion-card>
+
+  <ion-card (pan)="panEvent($event)">
+    <ion-item>
+      Panned: {{pan}} times
+    </ion-item>
+  </ion-card>
+
+  <ion-card (swipe)="swipeEvent($event)">
+    <ion-item>
+      Swiped: {{swipe}} times
+    </ion-item>
+  </ion-card>
+
+</ion-list>
+
+<ion-list *ngSwitchCase="'static'">
 
   <h2>徽章</h2>
 
@@ -214,6 +260,10 @@
     </button>
   </p>
 
+</ion-list>
+
+<ion-list *ngSwitchCase="'inside'">
+
   <p>组件中的按钮</p>
 
   <ion-card>
@@ -249,6 +299,9 @@
       </button>
     </ion-item>
   </ion-list>
+
+</ion-list>
   
+</div>
 
 </ion-content>

@@ -20,3 +20,8 @@ export class MyApp {
     });
   }
 }
+
+// @Component({
+//   templateUrl: '../pages/card/card.html'
+// })
+// export class 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NavController, Platform, ActionSheetController, AlertController } from 'ionic-angular';
+import { NavController, Platform, ActionSheetController,
+  AlertController, ToastController, LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,17 +9,26 @@ import { NavController, Platform, ActionSheetController, AlertController } from 
 })
 export class HomePage {
 
+  button: string = "action";
+
   testRadioOpen: boolean;
   testRadioResult;
 
   testCheckboxOpen: boolean;
   testCheckboxResult;
 
+  public press: number = 0;
+  public pan: number = 0;
+  public swipe: number = 0;
+  public tap: number = 0;
+
   constructor(
   	public navCtrl: NavController,
   	public platform: Platform,
   	public actionsheetCtrl: ActionSheetController,
-  	public alertCtrl: AlertController
+  	public alertCtrl: AlertController,
+    public toastCtrl: ToastController,
+    public loadingCtrl: LoadingController
   ) {
 
   }
@@ -226,6 +236,54 @@ export class HomePage {
   	checkbox.present().then(() => {
   		this.testCheckboxOpen = true;
   	});
+  }
+
+  showToast(position: string) {
+    let toast = this.toastCtrl.create({
+      message: '我会不会突然地出现',
+      duration: 2000,
+      position: position
+    });
+
+    toast.present(toast);
+  }
+
+  showToastWithCloseButton() {
+    const toast = this.toastCtrl.create({
+      message: '自己动手关宝宝',
+      showCloseButton: true,
+      closeButtonText: 'Ok'
+    });
+    toast.present();
+  }
+
+  showLongToast() {
+    let toast = this.toastCtrl.create({
+      message: '一行两行三四行~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~凑字数',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  pressEvent(e) {
+    this.press++
+  }
+  panEvent(e) {
+    this.pan++
+  }
+  swipeEvent(e) {
+    this.swipe++
+  }
+  tapEvent(e) {
+    this.tap++
+  }
+
+  presentLoading() {
+    this.loadingCtrl.create({
+      content: 'Please wait...',
+      duration: 3000,
+      dismissOnPageChange: true
+    }).present();
   }
 
 }

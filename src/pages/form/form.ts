@@ -18,10 +18,33 @@ export class FormPage {
 	    timeStarts: '07:43',
 	  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  brightness: number = 20;
+  contrast: number = 0;
+  warmth: number = 1300;
+  structure: any = { lower: 33, upper: 60 };
+  text: number = 0;
+
+  gender: string = "f";
+  os: string;
+  music: string;
+  month: string;
+  year: number;
+
+  musicAlertOpts: { title: string, subTitle: string };
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.musicAlertOpts = {
+      title: '1994 Music',
+      subTitle: 'Select your favorite'
+    };
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FormPage');
+  }
+
+  stpSelect() {
+    console.log('STP selected');
   }
 
 }

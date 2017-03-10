@@ -1,15 +1,48 @@
-<ion-content padding>
 	<ion-header>
 	  <ion-navbar>
 	    <button ion-button menuToggle icon-only>
 	      <ion-icon name='menu'></ion-icon>
 	    </button>
 	    <ion-title>
-	      Friends
+	      组件一览
 	    </ion-title>
 	  </ion-navbar>
 	</ion-header>
+
+
 	<ion-content padding>
-	  <button ion-button block menuToggle>Toggle Menu</button>
+	  <button ion-button block menuToggle>侧边栏菜单</button>
+		<ion-list>
+		    <ion-list-header>
+		      临时UI页面
+		    </ion-list-header>
+		    <a ion-item (click)="openModal({charNum: 0})">
+		      Gollum
+		    </a>
+		    <a ion-item (click)="openModal({charNum: 1})">
+		      Frodo Baggins
+		    </a>
+		    <a ion-item (click)="openModal({charNum: 2})">
+		      Sam
+		    </a>
+		    <ion-list-header>
+		      列表组件
+		    </ion-list-header>
+		    <a ion-item (click)="openIconListPage()">
+		      带图标的列表
+		    </a>
+		    <a ion-item (click)="openAvatarListPage()">
+		      带头像的列表
+		    </a>
+		    <a ion-item (click)="openMultlineListPage()">
+		      多行的列表
+		    </a>
+		    <a ion-item (click)="openSlidingListPage()">
+		      列表可滑动（置顶删除）
+		    </a>
+		    <a ion-item (click)="openThumbnailListPage()">
+		      缩略图列表
+		    </a>
+	  	</ion-list>
 	</ion-content>
-</ion-content>
+
